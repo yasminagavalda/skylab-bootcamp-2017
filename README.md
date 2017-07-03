@@ -1,4 +1,4 @@
-![m'lady](http://i.imgur.com/v8IVDka.jpg)
+
 
 # TODO *list*
 
@@ -6,7 +6,7 @@ TODO Codeacademy cmd [1]
 
 
 
-# Class 1 03/07
+# Class 1 03/07 
 
 * Herramientas de trabajo
 * Sublime Text 3
