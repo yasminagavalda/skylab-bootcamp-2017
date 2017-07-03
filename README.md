@@ -2,7 +2,8 @@
 
 # TODO *list*
 
-TODO Codeacademy cmd [1]
+TODO [Codeacademy cmd]
+
 
 
 
@@ -12,10 +13,11 @@ TODO Codeacademy cmd [1]
 * Sublime Text 3
 * Comand-line
 * Markdown
+* Git/GitHub
 
 
 
 # References
  
-[1]: https://www.ecosia.org
+[Codeacademy cmd]: https://www.codecademy.com/learn/learn-the-command-line
 
