@@ -58,7 +58,7 @@ Notas del bootcamp de Full-stack Web Development en Skylab Coders Academy
 * git reset => remove from the staging area
 * git checkout master => get back to the “current” state (latest commit) of the project
 
-![Git cheat sheet](http://files.zeroturnaround.com/pdf/zt_git_cheat_sheet.pdf)
+Git cheat sheet: http://files.zeroturnaround.com/pdf/zt_git_cheat_sheet.pdf
 
 
 
@@ -87,7 +87,7 @@ Notas del bootcamp de Full-stack Web Development en Skylab Coders Academy
 
 ***[Javascript Challenge 1]***
 
-[Javascript Challenge 1]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/Challenge1.js
+[Javascript Challenge 1]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/Javascript%20Challenge%201.js
 
 
 
