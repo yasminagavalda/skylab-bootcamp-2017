@@ -21,7 +21,8 @@ Notas del bootcamp de Full-stack Web Development en Skylab Coders Academy
 * Herramientas de trabajo (Sublime Text 3, Comand-line, Git y GitHub)
 * Markdown
 
-[Comand-line] 
+*[Comand-line]*
+
 [Comand-line]: https://www.codecademy.com/learn/learn-the-command-line
 
 * **pwd** outputs the name of the current working directory.
@@ -85,6 +86,7 @@ Git cheat sheet: http://files.zeroturnaround.com/pdf/zt_git_cheat_sheet.pdf
 * Closures
 
 *[Javascript Challenge 1]*
+
 [Javascript Challenge 1]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/Challenge1.js
 
 
@@ -120,6 +122,7 @@ Git cheat sheet: http://files.zeroturnaround.com/pdf/zt_git_cheat_sheet.pdf
 * funcion.every(function)
 
 *[Javascript Challenge 2]*
+
 [Javascript Challenge 2]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/Javascript%20Challenge%202.js
 
 *Javascript Objects*
@@ -172,6 +175,8 @@ true
 true
 ~~~
 Programmer object inherits the properties of the Human object even though it has undefined value
+
+
 
 
 
