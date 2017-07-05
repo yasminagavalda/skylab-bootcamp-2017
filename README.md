@@ -21,7 +21,7 @@ Notas del bootcamp de Full-stack Web Development en Skylab Coders Academy
 * Herramientas de trabajo (Sublime Text 3, Comand-line, Git y GitHub)
 * Markdown
 
-*[Comand-line]*
+[Comand-line] 
 [Comand-line]: https://www.codecademy.com/learn/learn-the-command-line
 
 * **pwd** outputs the name of the current working directory.
