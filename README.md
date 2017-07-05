@@ -21,7 +21,7 @@ Notas del bootcamp de Full-stack Web Development en Skylab Coders Academy
 * Herramientas de trabajo (Sublime Text 3, Comand-line, Git y GitHub)
 * Markdown
 
-*[Comand-line]*
+***[Comand-line]***
 
 [Comand-line]: https://www.codecademy.com/learn/learn-the-command-line
 
@@ -39,7 +39,7 @@ Notas del bootcamp de Full-stack Web Development en Skylab Coders Academy
 * **rm** removes files
 * **rm -r** removes directories
 
-*Git commands*
+***Git commands***
 
 * git init
 * git add
@@ -58,13 +58,13 @@ Notas del bootcamp de Full-stack Web Development en Skylab Coders Academy
 * git reset => remove from the staging area
 * git checkout master => get back to the “current” state (latest commit) of the project
 
-Git cheat sheet: http://files.zeroturnaround.com/pdf/zt_git_cheat_sheet.pdf
+![Git cheat sheet](http://files.zeroturnaround.com/pdf/zt_git_cheat_sheet.pdf)
 
 
 
 ### Class 2 (04/07)
 
-*Javascript Basics*
+***Javascript Basics***
 
 * Variables
 * Data Types
@@ -72,7 +72,7 @@ Git cheat sheet: http://files.zeroturnaround.com/pdf/zt_git_cheat_sheet.pdf
 * Conditionals (if, else if, else; switch:  case, default)
 * Loops (for, for in, while, do while, forEach)
 
-*Javascript Functions*
+***Javascript Functions***
 
 * Funciones pre-definidas
     * parseInt()
@@ -85,7 +85,7 @@ Git cheat sheet: http://files.zeroturnaround.com/pdf/zt_git_cheat_sheet.pdf
 * Callback functions
 * Closures
 
-*[Javascript Challenge 1]*
+***[Javascript Challenge 1]***
 
 [Javascript Challenge 1]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/Challenge1.js
 
@@ -93,7 +93,7 @@ Git cheat sheet: http://files.zeroturnaround.com/pdf/zt_git_cheat_sheet.pdf
 
 ### Class 3 (05/07)
 
-*Javascript Array Methods*
+***Javascript Array Methods***
 
 * array.push()
 * array.pop()
@@ -121,11 +121,11 @@ Git cheat sheet: http://files.zeroturnaround.com/pdf/zt_git_cheat_sheet.pdf
 * array.some(function)
 * funcion.every(function)
 
-*[Javascript Challenge 2]*
+***[Javascript Challenge 2]***
 
 [Javascript Challenge 2]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/Javascript%20Challenge%202.js
 
-*Javascript Objects*
+***Javascript Objects***
 
 * Constructor Functions
 ~~~
