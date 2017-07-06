@@ -8,7 +8,7 @@ Notas del bootcamp de Full-stack Web Development en Skylab Coders Academy
 ## TODO list
 
 ~~TODO Codeacademy cmd~~
-
+TODO Javascript Challenge 1 Extra: encodeWord, encodeWordPlus
 
 
 
@@ -127,6 +127,8 @@ Git cheat sheet: http://files.zeroturnaround.com/pdf/zt_git_cheat_sheet.pdf
 
 ***Javascript Objects***
 
+Object.keys(obj)
+
 * Constructor Functions
 ~~~
 function Human(name, surname, weight, height, gender) {
@@ -175,6 +177,167 @@ true
 true
 ~~~
 Programmer object inherits the properties of the Human object even though it has undefined value
+
+### Class 4 (06/07)
+
+***[Regular Expressions]***
+
+[Regular Expressions]: https://regex101.com/
+
+* Examples:
+    * /b[aeiou]t/: Matches "bat", "bet", "bit", "bot" and "but". Also matches "cricket bat", "bitter lemon"
+    * /^b[aeiou]t/: Will match "battering ram" but not "cricket bat"
+    * /b[aeiou]+t/: Matches "bat" and "bit" etc, but also "boot" and "boat"
+    * /[0-9a-f]*/: Will match hex
+    * /[0-9a-zA-Z]/: Upper and lower case are distinct; this matches alphanumeric strings
+    * /./: The dot '.' matches any character
+    * /\ ./: If you actually want to match a dot, escape it
+
+* Flags:
+    * g: global
+    * i: ignoreCase
+    * m: multiline
+
+* Methods:
+    * test(): Returns true if it finds something and false if it doesn't
+    * exec(): Return an array of string that match the pattern
+    * match(): Return an array of occurrences
+    * search(): Return the position of the first occurrence
+    * replace(): Allow us to replace the found string by another string
+    * split(): Accepts a regular expression to split a string in elements of an array
+
+***Hoisting***
+
+* Example :
+~~~
+var v = 1;
+function fun() {
+    console.log(v);
+    v = 5;
+    console.log(v);
+    var v = 6;
+}
+
+>>> fun();
+undefined
+5
+~~~
+
+***[Javascript Challenge 1 Extra]***
+
+[Javascript Challenge 1 Extra]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/Javascript%20Challenge%201%20Extra.js
+
+***Prototyping inheritance & Polyfill***
+
+~~~
+function fun() {
+    this.hello = 'hello!';
+}
+
+>>> fun();
+>>> window.hello;
+"hello!"
+
+>>> var obj = {};
+>>> fun.call(obj);
+
+
+function fun(name) {
+    this.hello = 'hello ' + name + '!';
+}
+
+>>> var obj = {};
+>>> fun.call(obj);
+>>> obj.hello
+"hello undefined!"
+
+>>> fun.call(obj, 'Yasmina')
+"hello Yasmina!"
+
+>>> fun ('peter')
+>>> window.hello
+"hello peter!"
+~~~
+~~~
+function Animal(species, name) {
+    this.setSpecies(species);
+    this.setName(name);
+}
+Animal.prototype.setSpecies = function(species) {
+    this._species = species;
+};
+Animal.prototype.getSpecies = function() {
+    return this._species;
+};
+Animal.prototype.setName = function(name) {
+    this._name = name;
+};
+Animal.prototype.getName = function() {
+    return this._name;
+};
+Animal.prototype.heal = function() {
+    console.log('healing...');
+};
+Animal.prototype.eat = function () {
+    console.log('eating...');
+};
+Animal.prototype.pee = function () {
+    console.log('pssssing....');
+};
+Animal.prototype.poo = function() {
+    console.log('poofffffff....');
+};
+Animal.prototype.sleep = function() {
+    console.log('Zzzz');
+};
+
+
+function Tiger(name, speed) {
+    Animal.call(this, 'tiger', name);
+    this.setSpeed(speed);
+}
+
+Tiger.prototype = new Animal();
+Tiger.prototype.setSpeed = function(speed) {
+    this._speed = speed;
+};
+Tiger.prototype.getSpeed = function() {
+    return this._speed;
+};
+~~~
+~~~
+Array.prototype.random = function random() {
+    return this[Math.floor(Math.random() * this.length)];
+}
+
+function randomArg() {
+     return Array.prototype.random.call(arguments);
+}
+~~~
+
+***Closures***
+
+~~~
+function SafeBox(thing) {
+    var secret = thing;
+    return function (pass) {
+        if (pass === 'dame un besito') {
+            return secret
+        }
+        return 'no'
+    }
+}
+
+>>> var caja = new SafeBox('me gusta jugar al futbol en pel...')
+>>> caja ('pass')
+"no"
+>>> caja('dame un besito')
+"me gusta jugar al futbol en pel..."
+~~~
+
+
+
+
 
 
 
