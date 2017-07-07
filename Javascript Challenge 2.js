@@ -13,6 +13,8 @@ function translate (string) {
 	return trans
 }
 
+translate("this is fun")
+
 
 
 // sum() & multiply(): Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
@@ -22,10 +24,14 @@ function sum (array) {
 	return array.reduce(s)
 }
 
+sum([1,2,3,4])
+
 function multiply (array) {
 	var m = function (a, b) {return a*b}
 	return array.reduce(m)
 }
+
+multiply([1,2,3,4])
 
 
 
@@ -34,6 +40,10 @@ function multiply (array) {
 function reverse (string) {
 	return string.split('').reverse().join('')
 };
+
+reverse("jag testar")
+
+
 
 
 
@@ -47,6 +57,8 @@ function translate (string) {
 	return trans.join(' ')
 }
 
+translate ('merry christmas and happy new year')
+
 
 
 // findLongestWord(): Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
@@ -58,8 +70,23 @@ function findLongestWord (array) {
 			result = word
 		}
 	})
-	return result
+	return result.length
 }
+
+findLongestWord(['hola', 'como', 'estas'])
+
+// metodo map crea una nueva array lo que provoca que utilice memoria para crear array. Mejor con metodo forEach
+
+function findLongestWord (array) {
+	var result = ''
+	array.forEach(function(word) {
+		if (word.length > result.length) {
+			result = word
+		}
+	})
+	return result.length
+}
+
 
 
 
@@ -67,26 +94,42 @@ function findLongestWord (array) {
 
 function filterLongWords (array, num) {
 	function f (element){
-		return element.length>num
-	}
-	var longWords = array.filter(f)
-	return longWords
+		return element.length>num;
+	};
+	var longWords = array.filter(f);
+	return longWords;
 }
+
+filterLongWords(['hola', 'como', 'estas'], 4);
 
 
 
 // charFreq(): Write a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
 
 function charFreq (string) {
-	var frequency = {}
+	var frequency = {};
 	function addfrequency (character) {
 		if (frequency[character]) {
-			frequency[character] += 1
+			frequency[character] += 1;
 		} else {
-			frequency[character] = 1
-		}
-	}
-	string.split('').forEach(addfrequency)
-	return frequency
+			frequency[character] = 1;
+		};
+	};
+	string.split('').forEach(addfrequency);
+	return frequency;
+};
+
+charFreq("abbabcbdbabdbdbabababcbcbab");
+
+// Ternarios
+
+function charFreq (str) {
+    var frequency = {}
+    function addFrequency (character) {
+      frequency[character] ? frequency[character]+=1 : frequency[character] = 1
+    }
+    str.split('').forEach(addFrequency)
+    return frequency
 }
 
+charFreq("asdfasdasaaasdsdfgsdfsd")
