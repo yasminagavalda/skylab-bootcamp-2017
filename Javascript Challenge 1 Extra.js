@@ -48,6 +48,23 @@ function calculator (operation) {
 
 calculator('suma', 10,2,5)
 
+// ECMA 6
+
+function calculator() {
+    var nums = Array.from(arguments);
+
+    switch (nums.shift()) {
+        case 'sum':
+            return nums.reduce((total, item) => total + item);   
+        case 'subtract':
+            return nums.reduce((total, item) => total - item);        
+        case 'multiply':
+            return nums.reduce((total, item) => total * item);       
+        case 'divide':
+            return nums.reduce((total, item) => total / item, 1);
+    }
+}
+
 
 
 // getFullName: Define a function called ​getFullName​ that receives a name and a surname and return the string "Your full name is " with the name & surname concatenated
@@ -68,6 +85,12 @@ function isNumber (value) {
 
 isNumber (3)
 
+//typeof
+
+function isNumber (value) {
+	return typeof value === 'number'
+}
+
 
 
 // isString: Define a function called ​isString​ that receives a value and return true if the value received is a string
@@ -77,6 +100,12 @@ function isString (value) {
 }
 
 isString ('aBJk')
+
+// typeof
+
+function isString (value) {
+	return typeof value === 'string'
+}
 
 
 
@@ -97,7 +126,7 @@ isBoolean (false)
 0 instead of O */
 
 function encodeWord (string) {
-	return string.replace(/T/g,7).replace(/A/g,4).replace(/S/g,5).replace(/O/g,0)
+	return string.replace(/T/gi,7).replace(/A/gi,4).replace(/S/gi,5).replace(/O/gi,0)
 }
 
 encodeWord ('TASOT')
@@ -107,12 +136,13 @@ encodeWord ('TASOT')
 // encodeWordPlus: Improve the previous function to add a random number between 0 and 1000 every 7 characters
 
 function encodeWordPlus (string) {
-	code = string.replace(/T/g,7).replace(/A/g,4).replace(/S/g,5).replace(/O/g,0).split('')
+	var code = string.replace(/T/gi,7).replace(/A/gi,4).replace(/S/gi,5).replace(/O/gi,0).split('')
 	for (i=7; i<=code.length; i+=7) {
 		code.splice(i, 0, Math.round(Math.random()*1000))
 	}
 	return code.join('')
 }
+
 
 encodeWordPlus ('TASOTASOTASO')
 
