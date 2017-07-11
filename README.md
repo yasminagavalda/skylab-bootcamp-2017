@@ -7,9 +7,11 @@ Notas del bootcamp de Full-stack Web Development en Skylab Coders Academy
 
 ## TODO list
 
-~~TODO Codeacademy cmd~~
-TODO Javascript Challenge 1 Extra: encodeWord, encodeWordPlus
-
+~~TODO Codeacademy cmd~~  
+~~TODO Javascript Challenge 1 Extra: encodeWord, encodeWordPlus~~
+TODO ~~Challenge3(46), Functions(47),~~ Strings(49), Strings**(50), Arrays(51), ~~Kata Jasmine~~
+~~TODO FizzBuzz Kata with Jasmine: Añadir expect para comprobar que los 'Fizz', 'Buzz', 'FizzBuzz' y numbers estan en posiciones correctas~~
+~~TODO html markup skylab page (77)~~
 
 
 
@@ -334,6 +336,202 @@ function SafeBox(thing) {
 >>> caja('dame un besito')
 "me gusta jugar al futbol en pel..."
 ~~~
+
+
+### Class 5 (07/07)
+
+***Repaso Javascript***
+
+* Spread Operator
+...arr
+
+***[Javascript Challenge 2]***
+
+[Javascript Challenge 2]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/Javascript%20Challenge%202.js
+
+***[Javascript Challenge 3]***
+
+[Javascript Challenge 3]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/Javascript%20Challenge%203.js
+
+***[Javascript Challenge Functions]***
+
+[Javascript Challenge Functions]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/Javascript%20Challenge%20Functions.js
+
+
+
+
+## Semana 2 
+
+### Class 6 (10/07)
+
+***HTML 5***
+
+Here's an example of a simple HTML document:
+~~~
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+   <HEAD>
+      <TITLE>My first HTML document</TITLE>
+   </HEAD>
+   <BODY>
+      <P>Hello world!
+   </BODY>
+</HTML>
+~~~
+
+***[Semantic Markup Challenge]***
+
+[Semantic Markup Challenge]: https://github.com/yasminagavalda/html5-layouts/blob/master/index.html
+
+***[Layout Challenges]***
+
+[Layout Challenges]: https://github.com/yasminagavalda/html5-layout-skylabcoders/blob/master/index.html
+
+### Class 7 (11/07)
+
+***CSS***
+
+* [Complex Selectors]
+
+[Complex Selectors]:http://learn.shayhowe.com/advanced-html-css/complex-selectors/
+
+    * Type selectors
+    ~~~
+    div {
+        background-color: skyblue;
+        width: 100px;
+        height: 100px;
+    }
+    ~~~
+
+    * Class Selectors
+    El selector de clase prevalece sobre el de tipo.
+    En caso de tener dos clases asignadas, prevalece la última, por efecto cascada.
+    Si se le aplica !important se fuerza que ese estilo prevalezca sobre los demás, aunque este por encima de otro.
+    ~~~
+    .warning {
+        background-color: yellow !important;
+    }
+    .error {
+        background-color: red;
+    }
+    ~~~
+
+
+    * ID Selectors
+    El selector de ID prevalece sobre el de clase.
+    ~~~
+    #myDiv {
+        background-color: cyan;
+    }
+    ~~~
+
+    * Descendant selector
+    Afecta a todos los h2 dentro de article
+    ~~~
+    article h2 {
+        color: white;
+    }
+    ~~~
+
+    * Direct Child Selector
+    Afecta a los h2 que sean directamente hijos de article (si dentro de article hay un section y dentro h2, este h2 no se ve afectado).
+    ~~~
+    article > h2 {
+        color: white;
+    }
+    ~~~
+
+    * General Sibling Selector
+    Afecta a los h2 y p que sean hermanos (por identación).
+    CSS
+    ~~~
+    h2 ~ p {...}
+    ~~~
+    HTML
+    ~~~
+    <p>...</p>
+    <section>
+      <p>...</p>
+      <h2>...</h2>
+      <p>This paragraph will be selected</p>
+      <div>
+        <p>...</p>
+      </div>
+      <p>This paragraph will be selected</p>
+    </section>
+    ~~~
+
+    * Adjacent Sibling Selector
+    Afecta a h2 y al p que esta justo después, no a los demás.
+    CSS
+    ~~~
+    h2 + p {...}
+    ~~~
+    HTML
+    ~~~
+    <p>...</p>
+    <section>
+      <p>...</p>
+      <h2>...</h2>
+      <p>This paragraph will be selected</p>
+      <div>
+        <p>...</p>
+      </div>
+      <p>...</p>
+    </section>
+    ~~~
+
+    * Attribute Selectors
+    Afecta a los anchor que contengan atributo 'target'.
+    CSS
+    ~~~
+    a[target] {...}
+    ~~~
+    HTML
+    ~~~
+    <a href="#" target="_blank">...</a>
+    ~~~
+
+    * Attribute Equals Selector and Attribute Contains Selector
+    CSS
+    ~~~
+    a[href="http://google.com/"] {...}
+    ~~~
+    HTML
+    ~~~
+    <a href="http://google.com/">...</a>
+    ~~~
+    CSS
+    ~~~
+    a[href*="login"] {...}
+    ~~~
+    HTML
+    ~~~
+    <a href="/login.php">...</a>
+    ~~~
+
+    * Attribute Begins and Ends With Selector
+    CSS
+    ~~~
+    a[href^="https://"] {...}
+    ~~~
+    HTML
+    ~~~
+    <a href="https://chase.com/">...</a>
+    ~~~
+    CSS
+    ~~~
+    a[href$=".pdf"] {...}
+    ~~~
+    HTML
+    ~~~
+    <a href="/docs/menu.pdf">...</a>
+    ~~~
+
+
+
 
 
 
