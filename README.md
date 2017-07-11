@@ -392,10 +392,9 @@ Here's an example of a simple HTML document:
 
 ***CSS***
 
+[Complex Selectors]:http://learn.shayhowe.com/advanced-html-css/complex-selectors/    
+    
 * [Complex Selectors]
-
-[Complex Selectors]:http://learn.shayhowe.com/advanced-html-css/complex-selectors/
-
     * Type selectors
     ~~~
     div {
@@ -417,7 +416,6 @@ Here's an example of a simple HTML document:
         background-color: red;
     }
     ~~~
-
 
     * ID Selectors
     El selector de ID prevalece sobre el de clase.
