@@ -364,21 +364,21 @@ function SafeBox(thing) {
 
 [Javascript Challenge Functions]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/Javascript%20Challenge%20Functions.js  
 
-***[Javascript Kata: Fizz Buzz (Jasmine)]***
+***[Javascript Kata: FizzBuzz (Jasmine)]***
   
 [Javascript Kata: FizzBuzz (Jasmine)]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/FizzBuzzSpec.js
 
-***[Javascript Kata: Fizz Buzz (Program)]***
+***[Javascript Kata: FizzBuzz (Program)]***
   
 [Javascript Kata: FizzBuzz (Program)]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/FizzBuzz.js 
 
 ***[Javascript Kata: Rock Paper Scissors (Jasmine)]***
   
-[Javascript Kata: FizzBuzz (Jasmine)]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/RockPaperScissorsSpec.js 
+[Javascript Kata: Rock Paper Scissors (Jasmine)]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/RockPaperScissorsSpec.js 
   
 ***[Javascript Kata: Rock Paper Scissors (Program)]***
   
-[Javascript Kata: FizzBuzz (Program)]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/RockPaperScissors.js
+[Javascript Kata: Rock Paper Scissors (Program)]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/RockPaperScissors.js
 
 
 
