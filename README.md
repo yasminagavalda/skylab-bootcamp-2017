@@ -345,6 +345,13 @@ function SafeBox(thing) {
 * Spread Operator
 ...arr
 
+***TDD***
+
+* Unit testings
+* TDD y BDD
+* Jasmine
+
+  
 ***[Javascript Challenge 2]***
 
 [Javascript Challenge 2]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/Javascript%20Challenge%202.js
@@ -355,7 +362,23 @@ function SafeBox(thing) {
 
 ***[Javascript Challenge Functions]***
 
-[Javascript Challenge Functions]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/Javascript%20Challenge%20Functions.js
+[Javascript Challenge Functions]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/Javascript%20Challenge%20Functions.js  
+
+***[Javascript Kata: Fizz Buzz (Jasmine)]***
+  
+[Javascript Kata: FizzBuzz (Jasmine)]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/FizzBuzzSpec.js
+
+***[Javascript Kata: Fizz Buzz (Program)]***
+  
+[Javascript Kata: FizzBuzz (Program)]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/FizzBuzz.js 
+
+***[Javascript Kata: Rock Paper Scissors (Jasmine)]***
+  
+[Javascript Kata: FizzBuzz (Jasmine)]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/RockPaperScissorsSpec.js 
+  
+***[Javascript Kata: Rock Paper Scissors (Program)]***
+  
+[Javascript Kata: FizzBuzz (Program)]: https://github.com/yasminagavalda/skylab-bootcamp-2017/blob/master/RockPaperScissors.js
 
 
 
@@ -404,7 +427,7 @@ Here's an example of a simple HTML document:
     }
     ~~~
 
-    * Class Selectors
+    * Class Selectors  
     El selector de clase prevalece sobre el de tipo.
     En caso de tener dos clases asignadas, prevalece la última, por efecto cascada.
     Si se le aplica !important se fuerza que ese estilo prevalezca sobre los demás, aunque este por encima de otro.
@@ -417,7 +440,7 @@ Here's an example of a simple HTML document:
     }
     ~~~
 
-    * ID Selectors
+    * ID Selectors  
     El selector de ID prevalece sobre el de clase.
     ~~~
     #myDiv {
@@ -425,7 +448,7 @@ Here's an example of a simple HTML document:
     }
     ~~~
 
-    * Descendant selector
+    * Descendant selector  
     Afecta a todos los h2 dentro de article
     ~~~
     article h2 {
@@ -433,7 +456,7 @@ Here's an example of a simple HTML document:
     }
     ~~~
 
-    * Direct Child Selector
+    * Direct Child Selector  
     Afecta a los h2 que sean directamente hijos de article (si dentro de article hay un section y dentro h2, este h2 no se ve afectado).
     ~~~
     article > h2 {
@@ -441,7 +464,7 @@ Here's an example of a simple HTML document:
     }
     ~~~
 
-    * General Sibling Selector
+    * General Sibling Selector  
     Afecta a los h2 y p que sean hermanos (por identación).
     CSS
     ~~~
@@ -461,7 +484,7 @@ Here's an example of a simple HTML document:
     </section>
     ~~~
 
-    * Adjacent Sibling Selector
+    * Adjacent Sibling Selector  
     Afecta a h2 y al p que esta justo después, no a los demás.
     CSS
     ~~~
@@ -481,7 +504,7 @@ Here's an example of a simple HTML document:
     </section>
     ~~~
 
-    * Attribute Selectors
+    * Attribute Selectors  
     Afecta a los anchor que contengan atributo 'target'.
     CSS
     ~~~
