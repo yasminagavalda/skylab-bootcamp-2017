@@ -8,9 +8,9 @@ Notas del bootcamp de Full-stack Web Development en Skylab Coders Academy
 ## TODO list
 
 ~~TODO Codeacademy cmd~~  
-~~TODO Javascript Challenge 1 Extra: encodeWord, encodeWordPlus~~
-TODO ~~Challenge3(46), Functions(47),~~ Strings(49), Strings**(50), Arrays(51), ~~Kata Jasmine~~
-~~TODO FizzBuzz Kata with Jasmine: Añadir expect para comprobar que los 'Fizz', 'Buzz', 'FizzBuzz' y numbers estan en posiciones correctas~~
+~~TODO Javascript Challenge 1 Extra: encodeWord, encodeWordPlus~~  
+TODO ~~Challenge3(46), Functions(47),~~ Strings(49), Strings**(50), Arrays(51), ~~Kata Jasmine~~  
+~~TODO FizzBuzz Kata with Jasmine: Añadir expect para comprobar que los 'Fizz', 'Buzz', 'FizzBuzz' y numbers estan en posiciones correctas~~  
 ~~TODO html markup skylab page (77)~~
 
 
