@@ -705,6 +705,10 @@ Because of being an array we can figure out the number of children-nodes with ch
 
 ### Class 11 (18/07)
 
+***[Calculadora de Porcentajes jQuery]***
+
+[Calculadora de Porcentajes jQuery]:https://github.com/yasminagavalda/percent-calculator-jQuery/tree/master
+
 ***[JSON]***
 
 [JSON]:https://github.com/juanmaguitar/javascript-notes/tree/master/markdown-en/13-JSON
