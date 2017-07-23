@@ -12,7 +12,8 @@ Notas del bootcamp de Full-stack Web Development en Skylab Coders Academy
 TODO ~~Challenge3(46), Functions(47),~~ Strings(49), Strings**(50), Arrays(51), ~~Kata Jasmine~~  
 ~~TODO FizzBuzz Kata with Jasmine: Añadir expect para comprobar que los 'Fizz', 'Buzz', 'FizzBuzz' y numbers estan en posiciones correctas~~  
 ~~TODO html markup skylab page (77)~~
-
+TODO HTML, CSS, Bootstrap & SASS challenges
+TODO jQuery & AngularJS Challenges
 
 
 ## Semana 1 
@@ -553,17 +554,200 @@ Here's an example of a simple HTML document:
 
 
 
+### Class 8 (12/07)
+* [MediaQuery]
+* [FlexBox]
+
+[MediaQuery]:http://learn.shayhowe.com/advanced-html-css/responsive-web-design/
+[FlexBox]:https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+### Class 9 (13/07)
+
+* Bootstrap
+    - [Estructura y ejemplos]
+    - [Grid]
+    - [Bootsnip]
+
+[Estructura y ejemplos]:http://getbootstrap.com/getting-started/#whats-included-precompiled
+[Grid]:http://getbootstrap.com/css/#grid
+[Bootsnip]:https://bootsnipp.com/resources
+
+### Class 10 (14/07)
+
+SASS
+
+## Semana 3 
+
+### Class 11 (17/07)
+
+***BOM***
+
+* window
+    * window.navigator
+    * window.history
+    * window.frames
+    * window.screen
+    * window methods
+        - window.open(), window.close()
+        - window.moveTo(), window.moveBy(), window.resizeTo(), window.resizeBy()
+        - window.alert(), window.prompt(), window.confirm()
+        - window.setTimeout(), window.setInterval()
+
+***DOM***
+
+* The document node gives us access to the document (the starting point). All nodes have the following properties:
+    * nodeType: There are 12 types of nodes represented by numbers(1=element, 2=attribute, 3=text, ...)
+    * nodeName: For HTML tags is the name of the tag and for text nodes is #text
+    * nodeValue: For text nodes will be the text
+     
+    ~~~
+    >>> document.documentElement
+    <html>
+    >>> document.documentElement.nodeType
+    1
+    >>> document.documentElement.nodeName
+    "HTML"
+    >>> document.documentElement.tagName
+    "HTML"
+    ~~~
+
+* Every node can have children-nodes:
+    * hasChildNodes() : This methos will return true if the node has children-nodes
+    * childNodes: Return an array of all the children-nodes of an element.
+Because of being an array we can figure out the number of children-nodes with childNodes.length
+    * parentNode: Return us the father-node of a children-node
+
+* We can access the content of a tag:
+    * textContent: This property give us the plain text inside of a tag In IE this property doesn't exists (we have to use innerText)
+    * innerHTML: This property gives us the content (in HTML) inside of a tag
+
+* We can directly access to some elements without the need of going over all the tre:
+    * getElementsByTagName(): Return an array with all the elements with the tag passed as a parameter
+    * getElementsByName(): Return an array with all the elements with the name passed as a parameter
+    * getElementById(): Return an element with the ID passed as a parameter
+
+* Creating and modifying the nodes
+    * style
+    * align
+    * name
+    * id
+    
+    ~~~
+    >>> my.style.border = "1px solid red";
+    "1px solid red"
+    >>> my.align = "right";
+    "right"
+    >>> my.name
+    >>> my.name = 'myname';
+    "myname"
+    >>> my.id
+    "closer"
+    >>> my.id = 'further'
+    "further"
+    ~~~
+
+    * createElement
+    * createTextNode
+    * appendChild
+    * cloneNode()
+    * insertBefore()
+    * removeChild(), replaceChild()
+
+* DOM objects only for HTML
+    * document.body: document.getElementsByTagName(‘body’)[0]
+    * document.images: document.getElementsByTagName(‘img’)
+    * document.applets: document.getElementsByTagName(‘applet’)
+    * document.links: Return an array of all the links with aatribute href
+    * document.anchors: Return an array with all the links with attribute name
+    * document.forms: document.getElementsByTagName(‘form’)
+    * document.write()
+    * document.cookies
+    * document.title
+    * document.referrer
+    * document.domain
+
+* Advanced selection of elements
+    * options: From a select we can access the array of its options
+    ~~~
+    >>> document.getElementsByTagName('select')[0].options;
+    [option.windows, option.movil, option.aplicaciones-web, option.mac,
+    option.linux, option.palm, option.pocketpc, option.blog]
+    ~~~
+    * querySelector, querySelectorAll
+    ~~~
+    >>> oMyElem = document.querySelector("#myid");
+    >>> aMyHiddenElems = document.body.querySelectorAll(".hidden");
+    ~~~
+
+***jQuery***
+
+* Selecting Elements:
+    - By ID: $("#myId");  
+    - By Class Name: $(".myClass");
+    - By Attribute: $("input[name='first_name']");
+    - By Compound CSS Selector: $("#contents ul.people li");
+    - With a Comma-separated List of Selectors: $("div.myClass, ul.people");
+    - Pseudo-Selectors:$("a.external:first");  $("tr:odd");
+
+* [Manipulating Elements]
+[Manipulating Elements]:http://learn.jquery.com/using-jquery-core/manipulating-elements/
+
+* [Traversing]
+[Traversing]:http://learn.jquery.com/using-jquery-core/traversing/
+
+* [Utility Methods]
+[Utility Methods]:http://learn.jquery.com/using-jquery-core/utility-methods/
+
+* [Iterating with $.each(), .each(), $.map() and .map()]
+[Iterating with $.each(), .each(), $.map() and .map()]:http://learn.jquery.com/using-jquery-core/iterating/
+
+* Events
+
+### Class 11 (18/07)
+
+***[JSON]***
+
+[JSON]:https://github.com/juanmaguitar/javascript-notes/tree/master/markdown-en/13-JSON
+
+***[AJAX]***
+
+[AJAX]:https://github.com/juanmaguitar/javascript-notes/tree/master/markdown-en/14-AJAX
+
+***[Same Origin Policy]***
+
+[Same Origin Policy]:https://github.com/juanmaguitar/javascript-notes/tree/master/markdown-en/15-same-origin-policy
+
+***API's***
+
+### Class 12 (19/07)
+
+***[Introducción a Angular JS]***
+
+[Introducción a Angular JS]:https://gist.github.com/juanmaguitar/c538d6cb108d27a37c73
+
+### Class 13 (20/07)
+
+***[Angular JS]***
+
+* $scope
+* Controllers
+* Templates
+* Routing
+* API calls ($http)
+* Factory & service
+
+[Angular JS]:https://angularjs.org/
+
+### Class 14 (21/07)
+
+***[Challenge: Angular Spotify API]***
+
+***[Challenge: Angular GitHub API]***
+
+[Challenge: Angular Spotify API]:https://github.com/yasminagavalda/spotiapp-angular-ajax
+[Challenge: Angular GitHub API]:https://github.com/yasminagavalda/github-user-repos-angular-ajax
 
 
 
-
-
-
-
-
-
-
-
- 
 
 
