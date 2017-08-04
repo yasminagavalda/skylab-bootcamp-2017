@@ -16,6 +16,8 @@ TODO HTML, CSS, Bootstrap & SASS challenges
 TODO jQuery & AngularJS Challenges
 
 
+# FRONTEND
+
 ## Semana 1 
 
 ### Class 1 (03/07)
@@ -753,5 +755,200 @@ Because of being an array we can figure out the number of children-nodes with ch
 
 
 
+## Semana 4
+
+*** Proyecto en grupos: [Wevelopers] ***
+
+* [GitHub]
+
+[Wevelopers]:https://yasminagavalda.github.io/wevelopers/#!/
+[GitHub]:https://github.com/yasminagavalda/wevelopers
 
 
+
+# BACKEND
+
+## Semana 5
+
+### Class 15 (31/07)
+
+***[Module Patterns]***
+
+[Module Patterns]:https://darrenderidder.github.io/talks/ModulePatterns/#/
+
+* require('hello.js')
+* export:
+~~~
+// bar.js
+module.exports = function () {
+  console.log('bar!');
+}
+ 
+// app.js
+var bar = require('./bar.js');
+bar();
+~~~
+* exports:
+~~~
+// fiz.js
+exports.fiz = function () {
+  console.log('fiz!');
+}
+
+// app.js
+var fiz = require('./fiz.js').fiz;
+fiz();
+~~~
+
+*** Modules Node ***
+
+* cool-ascii-faces
+~~~
+var cool = require('cool-ascii-faces')
+console.log(cool())
+~~~
+CMD: 
+$ node app.js
+(\/)(°,,,°)(\/)
+
+* Install modules:
+    - npm install: Instala en el directorio local
+    - npm install -g / npm install --global: Instala en global
+
+* npm init
+~~~
+//package.json
+{
+  "name": "demo-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+  "dependencies": {
+    "cool-ascii-faces": "^1.3.4"
+  }
+}
+~~~
+
+*** Modulos nativos ***
+
+* http
+~~~
+var http = require('http');
+~~~
+
+~~~
+var server = http.createServer();
+ 
+server.on("request", function (req, res) {
+    res.end("this is the response");
+});
+
+server.listen(3000);
+~~~
+
+* url
+~~~
+var myUrl = 'http://user:pass@host.com:8080/p/a/t/h?query=string#hash'
+var oUrl = url.parse(myUrl);
+~~~
+    - href → http://host.com:8080/p/a/t/h?query=string#hash
+    - protocol → http:
+    - host → host.com:8080
+    - hostname → host.com
+    - hostname → 8080
+    - pathname → /p/a/t/h
+    - search → ?query=string
+    - path → /p/a/t/h?query=string
+    - hash → #hash
+
+* path
+~~~
+var path = require('path');
+
+path.basename('/foo/bar/baz/asdf/quux.html') // 'quux.html'
+path.basename('/foo/bar/baz/asdf/quux.html', '.html') // 'quux'
+
+process.env.PATH // '/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
+process.env.PATH.split(path.delimiter) // ['/usr/bin', '/bin', '/usr/sbin', '/sbin', '/usr/local/bin']
+
+path.dirname('/foo/bar/baz/asdf/quux') // '/foo/bar/baz/asdf'
+
+path.extname('index.html') // returns '.html'
+
+path.isAbsolute('/foo/bar') // true
+path.isAbsolute('qux/')     // false
+
+path.join('/foo', 'bar', 'baz/asdf', 'quux', '..') // returns '/foo/bar/baz/asdf'
+
+path.normalize('/foo/bar//baz/asdf/quux/..') // returns '/foo/bar/baz/asdf'
+
+'foo/bar/baz'.split(path.sep) // returns ['foo', 'bar', 'baz']
+~~~
+
+* fs
+~~~
+//app.js
+var fs = require('fs')
+fs.writeFileSync('data.txt', 'this is a test')
+~~~
+CMD:
+$ node app.js
+$ cat data.txt
+this is a test
+
+    - fs.stat() 
+    - fs.statSync() 
+    - fs.lstat() 
+    - fs.lstatSync() 
+    - fs.fstat() 
+    - fs.fstatSync() devuelve una instancia (stats) de fs.Stats
+
+~~~
+stats.isFile()
+stats.isDirectory()
+stats.isBlockDevice()
+stats.isCharacterDevice()
+stats.isSymbolicLink() (only valid with fs.lstat())
+stats.isFIFO()
+stats.isSocket()
+~~~
+
+*** Modulos node (core) ***
+
+* [process]: El objeto process es global y es una instancia de EventEmitter.
+
+    - process.cwd directorio actual del proceso (directorio desde donde se llama el archivo, directorio donde se ejecuta node)
+    - process.argv: array que contiene los argumentos que se le pasan a la llamada del archivo con node, siendo process.argv[0] el propio comando node
+    - process.env: object
+
+[process]:http://www.hacksparrow.com/understanding-directory-references-in-node-js.html
+
+* Con __dirname podemos obtener el directorio del archivo que está siendo ejecutado
+
+
+
+
+
+### Class 19 (04/08)
+
+*** Promises ****
+
+* [Callback Hell]
+* Función constructora *new Promise*
+~~~
+const myFirstPromise = new Promise((resolve, reject) => {
+  // do something asynchronous which eventually calls either:
+  //
+  //   resolve(someValue); // fulfilled
+  // or
+  //   reject("failure reason"); // rejected
+});
+~~~
+
+
+[Callback Hell]:http://callbackhell.com/
