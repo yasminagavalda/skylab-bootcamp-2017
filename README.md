@@ -14,6 +14,8 @@ TODO ~~Challenge3(46), Functions(47),~~ Strings(49), Strings**(50), Arrays(51), 
 ~~TODO html markup skylab page (77)~~
 TODO HTML, CSS, Bootstrap & SASS challenges
 TODO jQuery & AngularJS Challenges
+TODO NodeJs Challenges (acabar)
+~~TODO ECMA2015 KATAs~~
 
 
 # FRONTEND
@@ -757,7 +759,7 @@ Because of being an array we can figure out the number of children-nodes with ch
 
 ## Semana 4
 
-*** Proyecto en grupos: [Wevelopers] ***
+***Proyecto en grupos: [Wevelopers]***
 
 * [GitHub]
 
@@ -771,6 +773,8 @@ Because of being an array we can figure out the number of children-nodes with ch
 ## Semana 5
 
 ### Class 15 (31/07)
+
+####Node.js
 
 ***[Module Patterns]***
 
@@ -800,7 +804,7 @@ var fiz = require('./fiz.js').fiz;
 fiz();
 ~~~
 
-*** Modules Node ***
+***Modules Node***
 
 * cool-ascii-faces
 ~~~
@@ -815,7 +819,7 @@ $ node app.js
     - npm install: Instala en el directorio local
     - npm install -g / npm install --global: Instala en global
 
-* npm init
+* npm init -y
 ~~~
 //package.json
 {
@@ -834,7 +838,7 @@ $ node app.js
 }
 ~~~
 
-*** Modulos nativos ***
+***Modulos nativos***
 
 * http
 ~~~
@@ -918,7 +922,7 @@ stats.isFIFO()
 stats.isSocket()
 ~~~
 
-*** Modulos node (core) ***
+***Modulos node (core)***
 
 * [process]: El objeto process es global y es una instancia de EventEmitter.
 
@@ -931,12 +935,123 @@ stats.isSocket()
 * Con __dirname podemos obtener el directorio del archivo que está siendo ejecutado
 
 
+### Class 16 (01/08)
 
+***[Event emiters, streams and buffers]***
+
+[Event emiters, streams and buffers]:http://book.mixu.net/node/ch9.html
+
+
+### Class 17 (02/08)
+
+***[Streams]***
+
+***[Readable, Writable & Transform Streams]***
+
+[Streams]:https://github.com/juanmaguitar/apuntes-nodejs/blob/master/streams/streams.md
+
+[Readable, Writable & Transform Streams]:https://gist.github.com/juanmaguitar/75a007ea2343f79068996bfbe7dcf47a
+
+### Class 18 (03/08)
+
+####ES2015
+
+***Arrow Functions***
+
+* Shorter syntax using =>
+* Always anonymous
+* Lexically bind this
+* Really useful for event handlers and callbacks
+* Really neat when using functional programming
+
+***Block Scope***
+
+* let
+* const
+
+***Template Strings***
+
+* Enclosed by back-ticks ``
+* Multi-line support
+* Can contain placeholders ${ expression }
+
+***Enhanced Object Literals***
+
+* Shorthand property names
+* Shorthand methods names
+* Dynamic property names
+* getter and setter
+
+***Default Parameters***
+~~~
+function f(x, y=12) {
+  // y is 12 if not passed (or passed as undefined)
+  return x + y;
+}
+~~~
+
+***Destructuring Arrays and Objects***
+~~~
+var [first, second, third, , fifth = 5] = [1, 2];
+first // 1
+second // 2
+third // undefined
+fifth // 5
+~~~
+
+~~~
+var customer = {
+  name: 'John',
+  surname: 'Doe',
+  dateOfBirth: {
+    year: 1988
+  }
+};
+­
+var {name, surname, dateOfBirth: {year}, children} = customer;
+name // 'John'
+surname // 'Doe'
+year // 1988
+children // undefined
+~~~
+
+***Rest and Spread operators***
+~~~
+function multiply(multiplier, ...numbers) {
+  return numbers.map(n => multiplier * n);
+}
+­
+var arr = multiply(2, 1, 2, 3);
+console.log(arr); // [2, 4, 6]
+~~~
+
+~~~
+function f(x, y, z) {
+  return x + y + z;
+}
+­
+var arr = [1, 2, 3];
+f(...arr) === 6; // true
+­
+[0, ...arr, 4, 5, 6, 7]; // [0, 1, 2, 3, 4, 5, 6, 7]
+~~~
+
+***Classes***
+
+* Class and [extends] keywords
+* [Constructor definition]
+* [Static] method definitions
+
+[extends]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends
+
+[Constructor definition]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor
+
+[Static]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static
 
 
 ### Class 19 (04/08)
 
-*** Promises ****
+***Promises***
 
 * [Callback Hell]
 * Función constructora *new Promise*
@@ -949,6 +1064,114 @@ const myFirstPromise = new Promise((resolve, reject) => {
   //   reject("failure reason"); // rejected
 });
 ~~~
+* Promise.all
+* Promise.race
 
 
 [Callback Hell]:http://callbackhell.com/
+
+
+## Semana 6
+
+### Class 20 (07/08)
+
+***Express***
+
+* app.get, app.post, app.delete, app.put
+~~~
+app.get('/', (req, res) => {
+    res.send('GET -> Hello World!')
+})
+
+app.post('/', (req, res) => {
+    res.send('POST -> Hello World!')
+})
+~~~
+~~~
+app.all('/', (req, res) => {
+    res.send('ALL -> Hello World!')
+})
+~~~
+
+* [Express routing]
+
+    - Routing and static files: app.use( express.static('public') ) -> Todos los archivos estaticos los buscará en la carpeta 'public'
+    ~~~
+    const express = require('express')
+    const path = require('path')
+    const app = express()
+
+    app.use( '/static', express.static( path.join(__dirname, 'public') )
+    ~~~
+    This route path will match requests to the root route, /.
+    ~~~
+    app.get('/', function (req, res) {
+      res.send('root')
+    })
+    ~~~
+    This route path will match requests to /about.
+    ~~~
+    app.get('/about', function (req, res) {
+      res.send('about')
+    })
+    ~~~
+    This route path will match acd and abcd.
+    ~~~
+    app.get('/ab?cd', function (req, res) {
+      res.send('ab?cd')
+    })
+    ~~~
+
+    - Route parameters
+    ~~~
+    Route path: /users/:userId/books/:bookId
+    Request URL: http://localhost:3000/users/34/books/8989
+    req.params: { "userId": "34", "bookId": "8989" }
+
+    app.get('/users/:userId/books/:bookId', function (req, res) {
+      const { userId: user, bookId: book } = req.params
+      res.send( `userId->${user} bookId->${book})
+    })
+    ~~~
+
+    - Route handlers
+    ~~~
+    app.get('/example/a', function (req, res) {
+      res.send('Hello from A!')
+    })
+
+    app.get('/example/b', function (req, res, next) {
+      console.log('the response will be sent by the next function ...')
+      next()
+    }, function (req, res) {
+      res.send('Hello from B!')
+    })
+    ~~~
+
+[Express routing]: https://www.diigo.com/annotated/495f15003add267cdd7ea347dfa1ad64
+
+* [Middlewares]
+
+[MiddleWares]:https://www.diigo.com/annotated/7f913fbf87c8453d076b1d0d7d826622
+
+* Pug. Permite trabajar con páginas dinámicas.
+~~~
+app.set('view engine', 'pug') //Busca en carpeta 'views' archivos .pug
+
+app.get('/', (req, res) => {
+    res.render('index') //Renderiza a html archivo index.pug
+})
+~~~
+
+* Request
+    - req.query: para capturar parametros de busqueda en una ruta: /books?sort=asc&limit=20
+
+* Response 
+    - res.json
+
+
+### Class 21 (08/08)
+
+***[Todo APP with Express]***
+
+[Todo APP with Express]:
