@@ -1170,8 +1170,15 @@ app.get('/', (req, res) => {
     - res.json
 
 
-### Class 21 (08/08)
+### Class 21 (08/08) & Class 22 (09/08)
 
-***[Todo APP with Express]***
+***[Todo APP with Express& Pug]***
 
-[Todo APP with Express]:
+[Todo APP with Express]:https://github.com/yasminagavalda/todoapp-express-pug
+
+
+### Class 23 (10/08)
+
+***[Login & register with Express & Pug]***
+
+[Login & register with Express & Pug]:https://github.com/yasminagavalda/login-register-express-pug
