@@ -1172,7 +1172,7 @@ app.get('/', (req, res) => {
 
 ### Class 21 (08/08) & Class 22 (09/08)
 
-***[Todo APP with Express& Pug]***
+***[TO DO APP with Express& Pug]***
 
 [Todo APP with Express]:https://github.com/yasminagavalda/todoapp-express-pug
 
@@ -1182,3 +1182,9 @@ app.get('/', (req, res) => {
 ***[Login & register with Express & Pug]***
 
 [Login & register with Express & Pug]:https://github.com/yasminagavalda/login-register-express-pug
+
+### Class 24 (11/08)
+
+***[TO DO App with Login & register made with Express & Pug]***
+
+[TO DO App with Login & register made with Express & Pug]:https://github.com/yasminagavalda/todoapp-login-express-pug
