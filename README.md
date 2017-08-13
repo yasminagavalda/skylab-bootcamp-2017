@@ -1174,7 +1174,7 @@ app.get('/', (req, res) => {
 
 ***[TO DO APP with Express& Pug]***
 
-[Todo APP with Express]:https://github.com/yasminagavalda/todoapp-express-pug
+[TO DO APP with Express& Pug]:https://github.com/yasminagavalda/todoapp-express-pug
 
 
 ### Class 23 (10/08)
