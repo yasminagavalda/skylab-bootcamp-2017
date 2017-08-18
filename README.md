@@ -1188,3 +1188,100 @@ app.get('/', (req, res) => {
 ***[TO DO App with Login & register made with Express & Pug]***
 
 [TO DO App with Login & register made with Express & Pug]:https://github.com/yasminagavalda/todoapp-login-express-pug
+
+
+
+## Semana 7
+
+### Class 25 (14/08)
+
+***MongoDB***
+
+* Insert Documents
+ - db.collection.insertOne()
+ - db.collection.insertMany()
+ - db.collection.insert()
+
+* Query Documents
+ - db.collection.find()
+
+* Update Documents
+ - db.collection.update()
+ - db.collection.updateOne()
+ - db.collection.updateMany()
+
+* Remove Documents
+ - db.collection.remove()
+ - db.collection.deleteOne()
+ - db.collection.deleteMany()
+
+* Return cursor where we can apply lots of methods. toArray to convert cursor into array of objects
+~~~
+db.collection('restaurants')
+  .find( )
+  .forEach( (myDoc) => console.log (doc) )
+~~~
+
+~~~
+db.collection('restaurants')
+  .find( )
+  .toArray( (err, docs) => console.log (docs) );
+~~~
+
+* Queries 
+~~~
+db.collection('restaurants')...
+  .find( )
+  .find( { "borough": "Manhattan" } )
+  .find( { "address.zipcode": "10075" } )
+  .find( { "grades.grade": "B" } )
+  .find( { "grades.score": { $gt: 30 } } ) // greater than
+  .find( { "grades.score": { $lt: 10 } } ) // greater than
+  .find( { "cuisine": "Italian", "address.zipcode": "10075" }) // AND
+  .find( { $or: [ 
+    { "cuisine": "Italian" }, 
+    { "address.zipcode": "10075" } 
+  ]}) // OR
+  .find().sort( { "borough": 1, "address.zipcode": 1 } );
+~~~
+
+* Projections
+~~~
+db.collection('users')...
+  .find( { status: "A" } )
+  .find( { status: "A" }, { name: 1, status: 1 } )
+  .find( { status: "A" }, { name: 1, status: 1, _id: 0 } )
+  .find( { status: "A" }, { favorites: 0, points: 0 } ) // all but excluded
+  .find(
+     { status: "A" },
+     { name: 1, status: 1, "favorites.food": 1 }
+  ) // Specific Fields in Embedded Documents
+~~~
+
+* [Cheatsheet]
+
+[Cheatsheet]:https://blog.codecentric.de/files/2012/12/MongoDB-CheatSheet-v1_0.pdf
+
+### Class 26 (15/08) & Class 27 (16/08)
+
+***[Restaurants finder with MongoDB & AngularJS]***
+
+[Restaurants finder with MongoDB & AngularJS]:https://github.com/yasminagavalda/mongo-angular-restaurants
+
+### Class 28 (17/08)
+
+***Mongoose***
+
+* [Schema]
+
+[Schema]:http://learnmongodbthehardway.com/schema/schemabasics/
+
+### Class 29 (18/08)
+
+***Heroku***
+
+* [TO DO App with mongoose]
+* [Restaurants finder]
+
+[TO DO App with mongoose]:https://mypersonaltodoapp.herokuapp.com/tasks
+[Restaurants finder]:https://findrestaurants.herokuapp.com/
