@@ -774,7 +774,7 @@ Because of being an array we can figure out the number of children-nodes with ch
 
 ### Class 15 (31/07)
 
-####Node.js
+#### Node.js
 
 ***[Module Patterns]***
 
@@ -954,7 +954,7 @@ stats.isSocket()
 
 ### Class 18 (03/08)
 
-####ES2015
+#### ES6
 
 ***Arrow Functions***
 
@@ -1198,22 +1198,22 @@ app.get('/', (req, res) => {
 ***MongoDB***
 
 * Insert Documents
- - db.collection.insertOne()
- - db.collection.insertMany()
- - db.collection.insert()
+    + db.collection.insertOne()
+    + db.collection.insertMany()
+    + db.collection.insert()
 
 * Query Documents
- - db.collection.find()
+    - db.collection.find()
 
 * Update Documents
- - db.collection.update()
- - db.collection.updateOne()
- - db.collection.updateMany()
+     + db.collection.update()
+     + db.collection.updateOne()
+     + db.collection.updateMany()
 
 * Remove Documents
- - db.collection.remove()
- - db.collection.deleteOne()
- - db.collection.deleteMany()
+     + db.collection.remove()
+     + db.collection.deleteOne()
+     + db.collection.deleteMany()
 
 * Return cursor where we can apply lots of methods. toArray to convert cursor into array of objects
 ~~~
